@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="mt-4">
+    <h2>{{ title }}</h2>
+    <form method="post">
+      {{ form.hidden_tag() }}
+      <div class="form-group">
+        {{ form.description.label(class="form-label") }}
+        {{ form.description(class="form-control", rows=4) }}
+      </div>
+      <button type="submit" class="btn btn-primary">{{ title }}</button>
+    </form>
+    <p class="mt-2"><a href="{{ url_for('main.index') }}">Back to home</a></p>
+  </div>
+{% endblock %}
